@@ -87,8 +87,8 @@ gulp.task('images', function () {
 });
 
 gulp.task('copy:public', function () {
-  return gulp.src('./public/*')
-    .pipe(gulp.dest('./dist'));
+  return gulp.src('./public/**/*.*')
+    .pipe(gulp.dest('./dist/public'));
 });
 
 gulp.task('watch', function () {
