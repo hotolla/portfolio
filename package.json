@@ -1,14 +1,14 @@
 {
-  "name": "strata",
+  "name": "portfolio",
   "version": "0.0.1",
-  "author": "Artem Verbat",
-  "homepage": "https://github.com/verbart/strata#readme",
+  "author": "Olha Koltsova",
+  "homepage": "https://github.com/hotolla/portfolio",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/verbart/strata.git"
+    "url": "git+https://github.com/hotolla/portfolio.git"
   },
   "bugs": {
-    "url": "https://github.com/verbart/strata/issues"
+    "url": "https://github.com/hotolla/portfolio/issues"
   },
   "scripts": {
     "start": "gulp",
