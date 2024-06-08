@@ -1,10 +1,12 @@
-FROM node:14-alpine AS development
+FROM node:20-alpine AS development
+
+RUN apk add autoconf automake libtool make tiff jpeg zlib zlib-dev pkgconf nasm file gcc musl-dev
 
 WORKDIR /app
 
 COPY package*.json ./
 
-RUN npm install --legacy-peer-deps
+RUN npm ci --include=dev --legacy-peer-deps
 
 COPY . .
 
