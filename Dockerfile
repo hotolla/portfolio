@@ -1,10 +1,10 @@
-FROM node:16-alpine AS development
+FROM node:14-alpine AS development
 
 WORKDIR /app
 
 COPY package*.json ./
 
-RUN npm ci --include=dev --legacy-peer-deps
+RUN npm ci --legacy-peer-deps
 
 COPY . .
 
