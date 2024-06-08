@@ -16,13 +16,17 @@ const source = require('vinyl-source-stream');
 const buffer = require('vinyl-buffer');
 const uglify = require('gulp-uglify');
 const imagemin = require('gulp-imagemin');
+const projects = require('./src/blocks/portfolio/projects');
 
 const isDevelopment = process.env.NODE_ENV !== 'production';
 
-
 gulp.task('views', function buildHTML() {
   return gulp.src('./src/index.pug')
-    .pipe(pug())
+    .pipe(pug({
+      data: {
+        projects
+      }
+    }))
     .on('error', function(error) {
       gutil.log(gutil.colors.red('Error: ' + error.message));
       this.emit('end');

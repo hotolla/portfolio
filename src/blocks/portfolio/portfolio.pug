@@ -1,15 +1,16 @@
 section.main__section.portfolio
   h2.heading.heading_2 My Recent Work
-.row
-  for item in Array.from({ length: 6 }, (_, i) => i + 1)
-    .col-sm-6
-      .thumbnail
-        a(href='images/0' + item + '.jpg')
-          .thumbnail__preview(
-            data-title='view'
-            title='Magna sed consequat tempus'
-            style='background-image: url(images/0' + item + '.jpg)'
-          )
-        h4.thumbnail__caption Magna sed consequat tempus
-        .thumbnail__description Lorem ipsum dolor sit amet nisl sed nullam feugiat.
-
+  .row
+    for project in projects
+      .col-sm-6
+        .thumbnail
+          a(href='images/0' + project.img + '.jpg')
+            .thumbnail__preview(
+              data-title='view'
+              title=project.name
+              style='background-image: url(images/0' + project.img + '.jpg)'
+            )
+          h3= project.name
+          .thumbnail__description= project.description
+          h5 Technology stack:
+          .thumbnail__description= project.stack
