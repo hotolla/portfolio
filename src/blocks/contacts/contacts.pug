@@ -1,0 +1,38 @@
+section.main__section.contacts
+  h2.heading.heading_2 Get In Touch
+  p
+    | Feel free to reach out if you have any questions or if you just want to connect.
+    | I'm available for freelance work and open to discussing new projects, creative ideas,
+    | or opportunities to be part of your vision. Let's create something amazing together!
+
+  .row
+    .col-sm-8
+      form.form.contacts__form
+        input(type='text' name='_gotcha' style='display: none;')
+
+        .row
+          .col-sm-6
+            input.form__input(placeholder='Name' name='name' required)
+          .col-sm-6
+            input.form__input(placeholder='Email' name='email' type='email' required)
+          .col-xs-12
+            textarea.form__input.form__textarea(rows='4' placeholder='Message' name='message')
+
+        button.button Send message
+
+    .col-sm-4
+      address
+        ul.address
+          li.address__item
+            i.fa.fa-home
+            span South Carolina
+              br
+              | United States
+
+          li.address__item
+            i.fa.fa-mobile
+            a.link.link_dotted(href='tel:+18646415456') +1 (864)6415456
+
+          li.address__item
+            i.fa.fa-envelope-o
+            a.link.link_dotted(href='mailto:hotolla@gmail.com') hotolla@gmail.com
