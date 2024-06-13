@@ -4,12 +4,13 @@ section.main__section.portfolio
     for project in projects
       .col-sm-6
         .thumbnail
-          a(href='images/0' + project.img + '.jpg')
-            .thumbnail__preview(
-              data-title='view'
-              title=project.name
-              style='background-image: url(images/0' + project.img + '.jpg)'
-            )
+          for i in [1, 2]
+            a(href='images/' + project.id + i +'.jpg')
+              .thumbnail__preview(
+                data-title='view'
+                title=project.name
+                style='background-image: url(images/' + project.id + i + '.jpg)'
+              )
           h3= project.name
           .thumbnail__description= project.description
           h5 Technology stack:
